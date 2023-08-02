@@ -1,0 +1,131 @@
+@import url('./css-guide/reset.css');
+
+:root{
+  /* primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* neutral colors */
+  
+  /* paragraphs */
+  --transparent-white:hsla(0, 0%, 100%, 0.75);
+
+  /* background, headings, buttons */
+  --very-light-gray:hsl(0, 0%, 95%);
+
+  --fw-regular:400;
+  --fw-bold:700;
+
+  --ff-bold: 'Big Shoulders Display', cursive;
+  --ff-regular: 'Lexend Deca', sans-serif;
+}
+
+body{
+  font-family: var(--ff-regular);
+  font-weight: var(--fw-regular);
+  font-size: 0.9375rem;
+  color:var(--transparent-white);
+  background-color: var(--very-light-gray);
+  display:grid;
+  place-content: center;
+  margin:2rem 1.5rem;
+  
+  
+}
+
+.car{
+  --border-radius:.5rem;
+  --padding: 2.5rem;
+  height:fit-content;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  
+  
+}
+
+@media (min-width:980px){
+  .car{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:fit-content
+  }
+}
+
+.car__class{
+  padding: var(--padding);
+  display: grid;
+  gap: 4.5rem;
+  width: 290px;
+}
+
+.car__section{
+  display: inherit;
+  gap:2rem;
+}
+
+.car__type{
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  text-transform: uppercase;
+  
+}
+
+.car__image{
+  width: min-content;
+  
+}
+
+.car__class.sedans{
+  background-color: var(--bright-orange);
+  ;
+}
+
+.car__class.suvs{
+  background-color: var(--dark-cyan);
+}
+
+.car__class.luxury{
+  background-color: var(--very-dark-cyan);
+}
+
+.car__detail{
+  width: max-content;
+  border-radius: 2rem;
+  border:1px solid transparent;
+  padding: .5rem 1.5rem;
+}
+
+
+.car__detail:hover{
+  border:1.5px solid var(--transparent-white);
+  cursor: pointer;
+}
+.car__detail.sedans{
+  color:var(--bright-orange)
+}
+
+.car__detail.sedans:hover{
+  color: var(--transparent-white);
+  background-color:var(--bright-orange);
+}
+
+.car__detail.suvs{
+  color:var(--dark-cyan)
+}
+
+.car__detail.suvs:hover{
+  background-color:var(--dark-cyan);
+  color: var(--transparent-white);
+  
+}
+
+.car__detail.luxury{
+  color:var(--very-dark-cyan)
+}
+
+.car__detail.luxury:hover{
+  background-color:var(--very-dark-cyan);
+  color: var(--transparent-white);
+  
+}
